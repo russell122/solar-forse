@@ -2421,7 +2421,7 @@ body input:required:valid, body textarea:required:valid {
 }
 
 .mySwiper__system-1 {
-  background-image: url("/assets/img/1.jpg");
+  background-image: url("../img/1.jpg");
 }
 
 .mySwiper__system-head {
@@ -2843,7 +2843,7 @@ body input:required:valid, body textarea:required:valid {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url("/assets/img/2.jpg");
+  background-image: url("../img/2.jpg");
 }
 
 @media (max-width: 1199px) {
