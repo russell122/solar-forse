@@ -1,0 +1,118 @@
+/* ------------------------------------- 
+ Common styles 
+ ------------------------------------- */
+.main-wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	.page
+		flex: 1
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+	.main-wrapper
+		display: block
+
+.container
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+
+@media (min-width: 576px)
+	.container
+		max-width: 540px
+
+@media (min-width: 768px)
+	.container
+		max-width: 758px
+
+@media (min-width: 992px)
+	.container
+		max-width: 960px
+
+@media (min-width: 1200px)
+	.container
+		max-width: 1200px
+
+.flex, .flex-center
+	display: flex
+	flex-wrap: wrap
+
+.flex-center
+	align-items: center
+	justify-content: center
+
+.img
+	display: block
+	max-width: 100%
+	height: auto
+	&--cover, &--contain
+		width: 100%
+		height: 100%
+	&--cover
+		object-fit: cover
+	&--contain
+		object-fit: contain
+.svg
+	display: block
+	max-width: 100%
+	max-height: 100%
+
+.nowrap
+	white-space: nowrap
+
+.text-center
+	text-align: center
+
+.list
+	margin: 0
+	padding: 0
+	list-style: none
+
+.hide-xl
+	@include max-screen($xl)
+		display: none !important
+
+.show-xl
+	@include min-screen(1200px)
+		display: none !important
+
+/* ---------- Titles & text ---------- */
+h1, .title-1
+
+h2, .title-2
+	font-weight: 600
+	font-size: 40px
+	line-height: 50px
+	letter-spacing: -0.005em
+	@media (max-width: $xl)
+		font-size: 34px
+		line-height: inherit
+	@media (max-width: $md)
+		font-size: 26px
+		line-height: inherit
+	@media (max-width: $sm)
+		font-size: 20px
+		line-height: inherit
+
+/* ----- Кнопки ----- */
+.button
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	width: 252px
+	height: 52px
+	font-size: 16px
+	line-height: 1
+	color: $white
+	position: relative
+	z-index: 1
+	cursor: pointer
+	overflow: hidden
+	@include trs(.1s)
+
+// @include max-screen($md)
+
+// @include max-screen($xl)
+
+// @include min-screen(1200px)
