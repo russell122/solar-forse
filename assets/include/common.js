@@ -1,4 +1,5 @@
 $(function() {
+	
 
 	$('.header__burger').click(function (event) {
 		$('.header__burger, .header__mnu, .swiper-pagination').toggleClass('active');
@@ -30,12 +31,41 @@ $(function() {
         },
       });
 
+	  var swiper2 = new Swiper(".subSwiper", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		observer: true,
+		observeParents: true,
+        pagination: {
+          el: ".subSwiper-pagination",
+		  clickable: true,
+        },
+      });
+
 });
 
 
-let swiperLlide = document.querySelectorAll('.swiper-slide');
-let mySwiperSystemNum = document.querySelectorAll('.mySwiper__system-num > span');
+window.addEventListener('DOMContentLoaded', () => {
 
-mySwiperSystemNum.forEach((el, i) => {
-	el.innerHTML = `0${i + 1}`;
-})
+    // фулл скрин
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
+    // конец фулл скрина
+
+	let swiperLlide = document.querySelectorAll('.swiper-slide');
+	let mySwiperSystemNum = document.querySelectorAll('.mySwiper__system-num > span');
+	
+	mySwiperSystemNum.forEach((el, i) => {
+		el.innerHTML = `0${i + 1}`;
+	})
+
+});
+

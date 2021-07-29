@@ -1,13 +1,15 @@
 .hero
-	// position: relative
-	// height: 100%
+	position: relative
+	height: 100%
 	.swiper-container
 		width: 100%
 		height: 100vh
+		height: calc(var(--vh, 1vh) * 100)
 		// height: 100%
 	.swiper-slide
 		display: flex
 		overflow: hidden
+		height: 100%
 	.swiper-pagination
 		top: 65%
 		right: 21px
@@ -25,6 +27,49 @@
 		@media (max-width: $sm)
 			padding: 10px 11px
 			top: 80%
+	.swiper-pagination-bullet
+		background-color: #BCC7D1
+		opacity: 1
+		width: 21px
+		height: 21px
+		margin: 10px 0!important
+		@media (max-width: $md)
+			width: 14px
+			height: 14px
+			margin: 7px 0!important
+		@media (max-width: $sm)
+			width: 10px
+			height: 10px
+			margin: 5px 0!important
+	.swiper-pagination-bullet-active
+		background-color: $accent
+	.subSwiper-pagination
+		position: absolute
+		left: 130px
+		z-index: 1
+		width: 190px
+		height: 59px
+		border-radius: 55px
+		background-color: #DEE4E9
+		display: flex
+		justify-content: center
+		align-items: center
+		@media (max-width: $lg)
+			bottom: 200px
+		@media (max-width: $sm)
+			left: 50%
+			transform: translate(-50%, 0)
+			width: 88px
+			height: 32px
+		.swiper-pagination-bullet
+			margin-right: 21px!important
+			background-color: $white
+			@media (max-width: $sm)
+				margin-right: 10px!important
+			&:last-child
+				margin-right: 0!important
+		.swiper-pagination-bullet-active
+			background-color: $accent
 	.swiper-pagination-bullet
 		background-color: #BCC7D1
 		opacity: 1
@@ -192,6 +237,7 @@
 				font-size: 18px
 			@media (max-width: $sm)
 				font-size: 15px
+				color: #BCC7D1
 	&__system-wrap
 		display: flex
 		height: 100%
@@ -286,7 +332,6 @@
 				&:last-child
 					margin-bottom: 0
 	&__system-right
-		// flex: 0 1 50%
 		width: 50%
 		background-repeat: no-repeat
 		background-size: cover
@@ -360,6 +405,213 @@
 						font-size: 16px
 					@media (max-width: $sm)
 						font-size: 14px
+	&__system4
+		background-color: #EFEFEF
+		.mySwiper__system-head
+			padding: 0
+			&::before
+				width: 0
+				height: 0
+		.mySwiper__system-logo
+			margin-bottom: 40px
+	.mySwiper__system-g
+		display: flex
+		@media (max-width: $md)
+			flex-direction: column
+			padding-left: 20px
+	.mySwiper__system-g-el
+		display: flex
+		border-radius: 50px
+		width: 320px
+		height: 100px
+		position: relative
+		@media (max-width: $sm)
+			width: 250px
+			height: 77px
+
+		.ch
+			position: absolute
+			top: -15px
+			right: 5px
+		.el
+			border-radius: 50%
+			width: 90px
+			height: 90px
+			background-color: $white
+			flex-shrink: 0
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 10px
+			@media (max-width: $sm)
+				width: 65px
+				height: 65px
+			span
+				font-size: 70px
+				font-weight: 700
+				color: #303030
+				line-height: 0
+				@media (max-width: $sm)
+					font-size: 40px
+		.body
+			display: flex
+			flex-direction: column
+			justify-content: center
+			p
+				margin-bottom: 0
+				font-weight: 700
+				font-size: 25px
+				line-height: 24px
+				@media (max-width: $sm)
+					font-size: 14px
+					line-height: inherit
+			span
+				margin-bottom: 5px
+				font-weight: 400
+				font-size: 25px
+				line-height: 24px
+				@media (max-width: $sm)
+					font-size: 14px
+					line-height: inherit
+			h5
+				font-size: 18px
+				line-height: 18px
+				margin-bottom: 0
+				font-weight: 400
+				@media (max-width: $sm)
+					font-size: 14px
+					line-height: inherit
+				span
+					font-weight: 700
+					line-height: 18px
+					font-size: 18px
+					@media (max-width: $sm)
+						font-size: 14px
+						line-height: inherit
+	.mySwiper__system-g-el-gr
+		border: 5px solid #00B41D
+		z-index: 5
+		background-color: #F2F2F2
+		@media (max-width: $md)
+			margin-bottom: 20px
+		.body
+			h5
+				color: #00580E
+				span
+					color: #00580E
+	.mySwiper__system-g-el-or
+		border: 5px solid #FFD579
+		left: -20px
+		background-color: #F2F2F2
+		@media (max-width: $md)
+			left: 0
+		.body
+			h5
+				color: #A07006
+				span
+					color: #A07006
+	&__system4-wrap
+		display: flex
+		height: 100%
+		@media (max-width: $xl)
+			flex-direction: column
+	&__system4-right
+		width: 50%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		display: flex
+		flex-direction: column
+		background-image: url('../img/4.jpg')
+		@media (max-width: $xl)
+			width: 100%
+			height: 100%
+			order: 0
+			max-height: 346px
+		@media (max-width: $md)
+			max-height: 246px
+		@media (max-width: $sm)
+			max-height: 146px
+	&__system4-left
+		width: 50%
+		padding-left: 130px
+		padding-top: 130px
+		padding-right: 10px
+		position: relative
+		z-index: 1
+		@media (max-width: $xxl)
+			padding-left: 50px
+			padding-top: 50px
+		@media (max-width: $xl)
+			padding-top: 40px
+			padding-left: 20px
+			padding-right: 40px
+			padding-bottom: 10px
+			width: 100%
+			order: 1
+			// background-color: #FBFBFB
+		&::before
+			content: ''
+			width: 2px
+			height: 100%
+			background-color: rgba(#C4C4C4, .2)
+			position: absolute
+			z-index: -1
+			left: 129px
+			top: 0
+			@media (max-width: $xxl)
+				left: 50px
+			@media (max-width: $xl)
+				left: 20px
+		.title-2
+			width: 460px
+			margin-bottom: 27px
+			@media (max-width: $xl)
+				width: 100%
+		ul
+			list-style-type: none
+			padding: 0
+			width: 560px
+			margin-bottom: 40px
+			@media (max-width: $xl)
+				width: 100%
+				margin-bottom: 65px
+			@media (max-width: $xl)
+				margin-bottom: 30px
+			// @media (max-width: $md)
+			// 	margin-bottom: 0px
+			li
+				padding-left: 40px
+				margin-bottom: 20px
+				position: relative
+				font-size: 26px
+				line-height: 30px
+				span
+					font-weight: 700
+				@media (max-width: $xl)
+					font-size: 22px
+					line-height: inherit
+				@media (max-width: $md)
+					font-size: 18px
+				@media (max-width: $sm)
+					font-size: 14px
+					margin-bottom: 15px
+				&::before
+					content: ''
+					position: absolute
+					top: 0%
+					transform: translate(0%, 0%)
+					left: 2px
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 18px 0 18px 19px
+					// border: 2px solid #ECEAEA
+					border-color: transparent transparent transparent #F3F3F3
+					@media (max-width: $sm)
+						top: -32%
+				&:last-child
+					margin-bottom: 0
 	&__system3
 		background-color: #EFEFEF
 		position: relative
@@ -507,6 +759,563 @@
 		right: -30px
 		@media (max-width: $xl)
 			right: 30px
+	&__system5
+		background-image: url('../img/5.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		@media (max-width: $lg)
+			background-color: #FBFBFB
+			background-image: none
+		.mySwiper__system-head
+			padding: 130px 0px 80px 130px
+			@media (max-width: $xl)
+				padding: 100px 0px 100px 100px
+				// display: none
+			@media (max-width: $lg)
+				padding: 100px 0px 100px 100px
+				display: none
+			@media (max-width: $md)
+				padding: 100px 0px 50px 50px
+			@media (max-width: $sm)
+				padding: 80px 0 0 20px
+			&::before
+				width: 0
+				height: 0
+	&__system5-img
+		display: none
+		@media (max-width: $lg)
+			display: flex
+			background-image: url('../img/5.jpg')
+			background-repeat: no-repeat
+			background-size: cover
+			width: 100%
+			height: 100%
+			min-height: 346px
+			margin-bottom: 30px
+		@media (max-width: $md)
+			min-height: 246px
+		@media (max-width: $sm)
+			min-height: 146px
+	&__system5-body
+		padding-left: 130px
+		margin-bottom: 80px
+		width: 600px
+		@media (max-width: $lg)
+			width: 100%
+			padding-left: 20px
+			padding-right: 50px
+		@media (max-width: $md)
+			margin-bottom: 50px
+		@media (max-width: $sm)
+			margin-bottom: 20px
+		p
+			font-size: 28px
+			line-height: 43px
+			color: $white
+			@media (max-width: $lg)
+				color: $black
+			@media (max-width: $xl)
+				font-size: 20px
+				line-height: inherit
+			@media (max-width: $md)
+				font-size: 16px
+			@media (max-width: $sm)
+				font-size: 14px
+	&__system5-bottom
+		display: flex
+		padding-left: 130px
+		@media (max-width: $lg)
+			padding-left: 20px
+			padding-right: 50px
+			padding-bottom: 50px
+		@media (max-width: $xl)
+			flex-wrap: wrap
+	&__system5-el
+		width: 238px
+		height: 72px
+		background-color: #000
+		border-radius: 50px
+		padding: 12px
+		display: flex
+		align-items: center
+		margin-right: 6px
+		&:last-child
+			margin-right: 0
+		@media (max-width: $xl)
+			margin-bottom: 12px
+			width: auto
+			height: 65px
+		@media (max-width: $sm)
+			margin-bottom: 12px
+			width: auto
+			height: 45px
+			padding: 8px 12px 8px 8px
+	&__system5-el-1
+		border: 4px solid #005EB4
+	&__system5-el-2
+		border: 4px solid #108F05
+	&__system5-el-3
+		border: 4px solid #FFC700
+	&__system5-ic
+		margin-right: 10px
+		flex-shrink: 0
+		img
+			@media (max-width: $sm)
+				width: 26px
+				height: 26px
+	&__system5-inf
+		display: flex
+		flex-direction: column
+		p
+			font-size: 25px
+			line-height: 24px
+			color: $white
+			margin-bottom: 0
+			@media (max-width: $xl)
+				font-size: 20px
+				line-height: inherit
+			@media (max-width: $md)
+				font-size: 16px
+			@media (max-width: $sm)
+				font-size: 14px
+		span
+			font-weight: 700
+			font-size: 25px
+			line-height: 24px
+			color: $white
+			@media (max-width: $xl)
+				font-size: 20px
+				line-height: inherit
+			@media (max-width: $md)
+				font-size: 16px
+			@media (max-width: $sm)
+				font-size: 14px
+	&__system6
+		background-color: #EFEFEF
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			right: 0
+			bottom: 0
+			background: rgba(188, 199, 209, 0.5)
+			width: 130px
+			height: 100%
+			@media (max-width: $lg)
+				width: 0
+				height: 0
+		.title-2
+			margin-bottom: 60px
+			@media (max-width: $md)
+				margin-bottom: 30px
+			@media (max-width: $sm)
+				margin-bottom: 15px
+		.mySwiper__system-head
+			padding: 130px 0px 80px 130px
+			@media (max-width: $xl)
+				padding: 100px 0px 100px 100px
+			@media (max-width: $lg)
+				padding: 100px 0px 100px 100px
+				display: none
+			&::before
+				width: 0
+				height: 0
+	&__system6-wrap
+		display: flex
+		height: 100%
+		@media (max-width: $lg)
+			flex-direction: column
+	&__system6-left
+		width: calc( 50% - 20px )
+		margin-right: 20px
+		@media (max-width: $lg)
+			margin-right: 0
+			width: 100%
+			padding-top: 50px
+		@media (max-width: $sm)
+			padding-left: 20px
+	&__system6-left-img
+		display: flex
+		justify-content: center
+		font-size: 10px
+		width: 92em
+		height: 49em
+		@media (max-width: $xxl)
+			font-size: 8px
+		@media (max-width: $xl)
+			font-size: 6px
+		@media (max-width: $sm)
+			font-size: 5px
+			justify-content: flex-start
+	&__system6-right
+		width: calc( 50% - 130px )
+		padding-right: 130px
+		@media (max-width: $lg)
+			width: 100%
+			padding-left: 100px
+			padding-right: 0
+		@media (max-width: $sm)
+			padding-left: 20px
+	&__system6-right-w
+		display: inline-flex
+		flex-direction: column
+	&__system6-right-elem
+		display: inline-flex
+		align-items: center
+		background-color: $white
+		margin-bottom: 10px
+		border-radius: 20px
+		padding-right: 20px
+		&:last-child
+			margin-bottom: 0
+		img
+			margin-right: 5px
+			flex-shrink: 0
+		p
+			font-size: 26px
+			line-height: 33px
+			font-weight: 700
+			@media (max-width: $xl)
+				font-size: 22px
+				line-height: inherit
+			@media (max-width: $md)
+				font-size: 18px
+			@media (max-width: $sm)
+				font-size: 14px
+			span
+				font-weight: 400
+				font-size: 26px
+				line-height: 33px
+				@media (max-width: $xl)
+					font-size: 22px
+					line-height: inherit
+				@media (max-width: $md)
+					font-size: 18px
+				@media (max-width: $sm)
+					font-size: 14px
+	&__system7
+		background-color: #EFEFEF
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			right: 0
+			bottom: 0
+			background: rgba(188, 199, 209, 0.5)
+			width: 130px
+			height: 100%
+			@media (max-width: $lg)
+				width: 0
+				height: 0
+		.title-2
+			margin-bottom: 60px
+			@media (max-width: $md)
+				margin-bottom: 30px
+			@media (max-width: $sm)
+				margin-bottom: 15px
+		.mySwiper__system-head
+			padding: 130px 0px 80px 130px
+			@media (max-width: $xl)
+				padding: 100px 0px 100px 100px
+			@media (max-width: $lg)
+				padding: 100px 0px 100px 100px
+				display: none
+			&::before
+				width: 0
+				height: 0
+	&__system7-wrap
+		display: flex
+		height: 100%
+		@media (max-width: $lg)
+			flex-direction: column
+	&__system7-right
+		width: calc( 50% - 130px )
+		padding-right: 130px
+		@media (max-width: $lg)
+			width: 100%
+			padding-left: 100px
+			padding-right: 0
+			order: -1
+		@media (max-width: $sm)
+			padding-left: 20px
+			padding-top: 50px
+	&__system7-right-img
+		display: flex
+		justify-content: center
+		font-size: 10px
+		width: 72em
+		height: 64em
+		@media (max-width: $xxl)
+			font-size: 8px
+		@media (max-width: $xl)
+			font-size: 6px
+		@media (max-width: $sm)
+			font-size: 4px
+			justify-content: flex-start
+	&__system7-left
+		width: calc( 50% - 20px )
+		margin-right: 20px
+		padding-left: 130px
+		@media (max-width: $lg)
+			margin-right: 0
+			width: 100%
+			padding-top: 50px
+		@media (max-width: $sm)
+			padding-left: 20px
+			padding-top: 0
+	.t
+		font-size: 28px
+		line-height: 43px
+		margin-bottom: 40px
+		@media (max-width: $xl)
+			font-size: 20px
+			line-height: inherit
+		@media (max-width: $md)
+			font-size: 16px
+			margin-bottom: 20px
+		@media (max-width: $sm)
+			font-size: 14px
+	&__system7-left-w
+		display: inline-flex
+		flex-direction: column
+	&__system7-left-elem
+		display: inline-flex
+		align-items: center
+		background-color: $white
+		margin-bottom: 10px
+		border-radius: 20px
+		padding-right: 20px
+		&:last-child
+			margin-bottom: 0
+		img
+			margin-right: 5px
+			flex-shrink: 0
+		p
+			font-size: 26px
+			line-height: 33px
+			font-weight: 700
+			@media (max-width: $xl)
+				font-size: 22px
+				line-height: inherit
+			@media (max-width: $md)
+				font-size: 18px
+			@media (max-width: $sm)
+				font-size: 14px
+			span
+				font-weight: 400
+				font-size: 26px
+				line-height: 33px
+				@media (max-width: $xl)
+					font-size: 22px
+					line-height: inherit
+				@media (max-width: $md)
+					font-size: 18px
+				@media (max-width: $sm)
+					font-size: 14px
+	&__system8
+		background-image: url('../img/8.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		position: relative
+		&::before
+			content: ''
+			width: 2px
+			height: 100%
+			background-color: rgba(#C4C4C4, .2)
+			position: absolute
+			z-index: 1
+			left: 129px
+			top: 0
+			@media (max-width: $xl)
+				left: 99px
+			@media (max-width: $lg)
+				width: 0
+				height: 0
+	&__system8-cont
+		position: relative
+		padding-left: 130px
+		@media (max-width: $md)
+			padding-left: 20px
+			padding-top: 30px
+		.title-2
+			margin-bottom: 45px
+			@media (max-width: $sm)
+				margin-bottom: 20px
+		p
+			font-size: 28px
+			line-height: 42px
+			margin-bottom: 50px
+			@media (max-width: $xl)
+				font-size: 22px
+				line-height: inherit
+			@media (max-width: $md)
+				font-size: 18px
+			@media (max-width: $sm)
+				font-size: 14px
+				margin-bottom: 20px
+		span
+			font-size: 28px
+			line-height: 42px
+			font-weight: 700
+			@media (max-width: $xl)
+				font-size: 22px
+				line-height: inherit
+			@media (max-width: $md)
+				font-size: 18px
+			@media (max-width: $sm)
+				font-size: 14px
+	&__system9
+		background-color: #EFEFEF
+		position: relative
+		.mySwiper__system-head
+			padding: 130px 0px 0px 130px
+			@media (max-width: $lg)
+				padding: 100px 0px 100px 100px
+				display: none
+			&::before
+				width: 0
+				height: 0
+		&::after
+			content: ''
+			position: absolute
+			right: 0
+			bottom: 0
+			background: rgba(188, 199, 209, 0.5)
+			width: 130px
+			height: 100%
+			@media (max-width: $lg)
+				width: 0
+				height: 0
+		&::before
+			content: ''
+			width: 2px
+			height: 100%
+			background-color: rgba(#C4C4C4, .2)
+			position: absolute
+			z-index: 1
+			left: 129px
+			top: 0
+			@media (max-width: $xl)
+				left: 99px
+			@media (max-width: $lg)
+				width: 0
+				height: 0
+		.subSwiper
+			padding-left: 130px
+			@media (max-width: $sm)
+				padding-left: 20px
+		.subSwiper__wrap
+			display: flex
+			width: 100%
+			height: 100%
+			@media (max-width: $lg)
+				flex-direction: column
+		.subSwiper__left
+			width: 50%
+			padding-top: 100px
+			@media (max-width: $lg)
+				padding-top: 0px
+				width: 100%
+			span
+				font-size: 16px
+				line-height: 24px
+				font-weight: 600
+				text-transform: uppercase
+				color: #9594A2
+			h3
+				font-size: 40px
+				font-weight: 600
+				color: #373941
+				@media (max-width: $xl)
+					font-size: 30px
+					line-height: inherit
+				@media (max-width: $md)
+					font-size: 24px
+				@media (max-width: $sm)
+					font-size: 18px
+			p
+				font-size: 28px
+				line-height: 42px
+				@media (max-width: $xl)
+					font-size: 22px
+					line-height: inherit
+				@media (max-width: $md)
+					font-size: 18px
+				@media (max-width: $sm)
+					font-size: 14px
+			h4
+				font-size: 28px
+				line-height: 42px
+				@media (max-width: $xl)
+					font-size: 22px
+					line-height: inherit
+				@media (max-width: $md)
+					font-size: 18px
+				@media (max-width: $sm)
+					font-size: 14px
+				span
+					font-weight: 700
+					font-size: 28px
+					line-height: 42px
+					color: #D9004C
+					@media (max-width: $xl)
+						font-size: 22px
+						line-height: inherit
+					@media (max-width: $md)
+						font-size: 18px
+					@media (max-width: $sm)
+						font-size: 14px
+		.subSwiper__left-el
+			position: absolute
+			z-index: 5
+			bottom: 100px
+			padding: 25px
+			background: linear-gradient(121.24deg, #7E2AE4 0%, #FF4900 99.09%)
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 60%
+			@media (max-width: $lg)
+				bottom: 0
+				width: 100%
+				left: 0
+				padding: 10px
+			span
+				font-size: 42px
+				color: $white
+				text-transform: uppercase
+				font-weight: 700
+				margin-right: 25px
+				@media (max-width: $lg)
+					margin-right: 20px
+					font-size: 34px
+				@media (max-width: $md)
+					margin-right: 20px
+					font-size: 26px
+				@media (max-width: $sm)
+					margin-right: 20px
+					font-size: 20px
+		.subSwiper__right
+			width: 50%
+			@media (max-width: $lg)
+				width: 100%
+				order: -1
+				margin-bottom: 3px
+				padding-top: 50px
+		.subSwiper__right-img
+			display: flex
+			justify-content: center
+			font-size: 10px
+			width: 69em
+			height: 69em
+			@media (max-width: $xxl)
+				font-size: 8px
+			@media (max-width: $xl)
+				font-size: 6px
+			@media (max-width: $sm)
+				font-size: 5px
+				justify-content: flex-start
+
 @media screen and (max-width: 992px)
 	body.lock
 		overflow: hidden
