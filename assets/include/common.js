@@ -1,5 +1,5 @@
-$(function() {
-	
+$(function () {
+
 
 	$('.header__burger').click(function (event) {
 		$('.header__burger, .header__mnu, .swiper-pagination').toggleClass('active');
@@ -20,49 +20,49 @@ $(function() {
 	});
 
 	var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        // mousewheel: true,
+		direction: "vertical",
+		slidesPerView: 1,
+		spaceBetween: 30,
+		mousewheel: true,
 		// autoHeight: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
 
-	  var swiper2 = new Swiper(".subSwiper", {
+	var swiper2 = new Swiper(".subSwiper", {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		observer: true,
 		observeParents: true,
-        pagination: {
-          el: ".subSwiper-pagination",
-		  clickable: true,
-        },
-      });
+		pagination: {
+			el: ".subSwiper-pagination",
+			clickable: true,
+		},
+	});
 
 });
 
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    // фулл скрин
+	// фулл скрин
 
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-    window.addEventListener('resize', () => {
-        // We execute the same script as before
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
+	window.addEventListener('resize', () => {
+		// We execute the same script as before
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
 
-    // конец фулл скрина
+	// конец фулл скрина
 
 	let swiperLlide = document.querySelectorAll('.swiper-slide');
 	let mySwiperSystemNum = document.querySelectorAll('.mySwiper__system-num > span');
-	
+
 	mySwiperSystemNum.forEach((el, i) => {
 		el.innerHTML = `0${i + 1}`;
 	})
